@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SmallMSG</string>
+    <string name="input_message">Type je bericht</string>
+    <string name="button_send">Sturen</string>
+</resources>
