@@ -4,11 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#100E19"
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="330dp"
         android:layout_height="53dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
         android:layout_marginBottom="16dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,9 +24,12 @@
             android:layout_width="242dp"
             android:layout_height="52dp"
             android:autofillHints=""
+            android:backgroundTint="@color/white"
             android:ems="10"
+            android:hint="@string/input_message"
             android:inputType="textPersonName"
-            android:text="@string/input_message" />
+            android:textColor="@color/white"
+            android:textColorHint="@color/material_dynamic_neutral70" />
 
         <Space
             android:layout_width="wrap_content"
@@ -33,6 +40,18 @@
             android:id="@+id/button_send"
             android:layout_width="76dp"
             android:layout_height="wrap_content"
+            android:onClick="sendMessage"
             android:text="@string/button_send" />
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="361dp"
+        android:layout_height="688dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="5"
+        tools:listitem="@android:layout/two_line_list_item" />
 </androidx.constraintlayout.widget.ConstraintLayout>
