@@ -7,12 +7,16 @@ import android.widget.EditText
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+    var myList = ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val  myAdapter = MyListAdapter{}
     }
     fun sendMessage(view: View){
         val sentMessage = findViewById<EditText>(R.id.editTextInput)
-        findViewById<TextView>(R.id.display_message).text = sentMessage.text.toString()
+        myList.add(sentMessage.text.toString())
+        // findViewById<TextView>(R.id.display_message).text = sentMessage.text.toString()
+
     }
 }
